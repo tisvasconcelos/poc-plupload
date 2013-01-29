@@ -1,0 +1,176 @@
+	body{
+		font: 12px Arial;
+		margin: 0;
+	}
+	button {
+		font: bold 0.8em Arial, sans-serif;
+		color: white;
+		padding: 4px 13px;
+		border: solid 1px;
+		border-top-color: #64AACD;
+		border-bottom-color: #4098C4;
+		border-left-color: #61A9CC;
+		border-right-color: #57A3C8;
+		background-color: #1085BF;
+		outline: 0 none;
+		opacity: 1.0;
+		cursor: pointer;
+		text-shadow: 0px 1px 5px #1978B3;
+		background-color: #36B8EE;
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#36B8EE), to(#1085BF));
+		background-image: -webkit-linear-gradient(top, #36B8EE, #1085BF);
+		background-image: -moz-linear-gradient(top, #36B8EE, #1085BF);
+		background-image: -o-linear-gradient(top, #36B8EE, #1085BF);
+		background-image: linear-gradient(to bottom, #36B8EE, #1085BF);
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+		-webkit-background-clip: padding-box;
+		-moz-background-clip: padding;
+		background-clip: padding-box;
+		-moz-box-shadow: 0 1px 2px #adb3bc;
+		-webkit-box-shadow: 0 1px 2px #ADB3BC;
+		box-shadow: 0 1px 2px #ADB3BC;
+	}
+		button:hover, button:active {
+			color: white;
+			border: solid 1px;
+			border-top-color: #64AACD;
+			border-bottom-color: #479DC6;
+			border-left-color: #61A9CC;
+			border-right-color: #57A3C8;
+			background-position: left top;
+			background-color: #349ECA;
+			background-color: #69C5EB;
+			background-image: -webkit-gradient(linear, left top, left bottom, from(#69C5EB), to(#2A9AD1));
+			background-image: -webkit-linear-gradient(top, #69C5EB, #2A9AD1);
+			background-image: -moz-linear-gradient(top, #69C5EB, #2A9AD1);
+			background-image: -o-linear-gradient(top, #69C5EB, #2A9AD1);
+			background-image: linear-gradient(to bottom, #69C5EB, #2A9AD1);
+		}
+	.image-container{
+		float: left;
+		margin: 10px;
+		z-index: 1;
+	}
+
+	.image-container a{
+		display: inline-block;
+		text-decoration: none;
+		color: #5694db;
+		padding: 40px 15px;
+		border: solid #ccc 1px;
+		width: 95px;
+		height: 15px;
+	}
+
+	.image-container .image{
+		border: solid #ccc 1px;
+		display: inline-block;
+		width: 125px;
+		height: 95px;
+		overflow: hidden;
+		text-align: center;
+	}
+
+		.image-container.error a{
+			border-color: #ff0000;
+		}
+
+		.image-container.error .error{
+			color: #ff0000;
+			float: left;
+		}
+
+		.image-container a .ico-plus{
+			background: url('../images/ico-plus.png') no-repeat right center;
+			text-indent: -9999px;
+			width: 10px;
+			display: inline-block;
+		}
+
+	#modal{
+		display: none;
+	}
+
+		#modal .bg{
+			background: #000;
+			-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+			filter: alpha(opacity=30);
+			opacity: 0.3;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			z-index: 10;
+		}
+
+		#modal .message{
+			position: absolute;
+			background: #fff;
+			z-index: 20;
+			border-radius: 5px;
+			padding: 15px;
+		}
+
+			#modal .message.progress{
+				width: 500px;
+				margin: 0 auto;
+			}
+
+				#modal .message.progress p{
+					margin: 0 0 10px;
+				}
+
+				#modal .message.progress .progress-bar{
+					float: left;
+					height: 15px;
+					width: 100%;
+					color: #fff;
+					text-align: right;
+					margin-bottom: 10px;
+
+					border-radius: 4px;
+
+					background-color: #F7F7F7;
+					background-image: -moz-linear-gradient(top, whiteSmoke, #F9F9F9);
+					background-image: -webkit-gradient(linear, 0 0, 0 100%, from(whiteSmoke), to(#F9F9F9));
+					background-image: -webkit-linear-gradient(top, whiteSmoke, #F9F9F9);
+					background-image: -o-linear-gradient(top, whiteSmoke, #F9F9F9);
+					background-image: linear-gradient(to bottom, whiteSmoke, #F9F9F9);
+					background-repeat: repeat-x;
+					-webkit-border-radius: 4px;
+					-moz-border-radius: 4px;
+					border-radius: 4px;
+					filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#fff9f9f9', GradientType=0);
+					-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+					-moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+					box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+				}
+					#modal .message.progress .progress-bar span{
+						float: left;
+						width: 0%;
+
+						border-radius: 4px;
+
+						background-color: #149BDF;
+						background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+						background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+						background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+						background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+						background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+
+						-webkit-background-size: 40px 40px;
+						-moz-background-size: 40px 40px;
+						-o-background-size: 40px 40px;
+						background-size: 40px 40px;
+
+						-webkit-transition: width 0.6s ease;
+						-moz-transition: width 0.6s ease;
+						-o-transition: width 0.6s ease;
+						transition: width 0.6s ease;
+
+						-webkit-animation: progress 2s linear infinite;
+						-moz-animation: progress 2s linear infinite;
+						-ms-animation: progress 2s linear infinite;
+						-o-animation: progress 2s linear infinite;
+						animation: progress 2s linear infinite;
+					}

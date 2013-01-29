@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test Upload</title>
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<div id="image-container_1" class="image-container">
+		<a id="upload-image_1" href="#">incluir imagem <i class="ico-plus">+</i></a>
+	</div>
+
+	<div id="image-container_2" class="image-container">
+		<a id="upload-image_2" href="#">incluir imagem <i class="ico-plus">+</i></a>
+	</div>
+
+	<div id="image-container_3" class="image-container">
+		<a id="upload-image_3" href="#">incluir imagem <i class="ico-plus">+</i></a>
+	</div>
+
+	<div id="modal">
+		<div class="bg">&nbsp;</div>
+		<div class="message progress">
+			<p class="title">Enviando imagem...</p>
+			<div class="progress-bar"><span>0%</span></div>
+			<button type="button" class="close">OK</button>
+		</div>
+	</div>
+
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script type="text/javascript" src="js/plupload.js"></script>
+	<script type="text/javascript" src="js/plupload.flash.js"></script>
+	<script type="text/javascript" src="js/plupload.browserplus.js"></script>
+	<script type="text/javascript" src="js/plupload.html4.js"></script>
+	<script type="text/javascript" src="js/plupload.html5.js"></script>
+	<script type="text/javascript" src="js/i18n/pt-br.js"></script>
+	<script type="text/javascript" src="js/upload.js"></script>
+
+	<script type="text/javascript">
+	Upload._contructor('.image-container');
+	</script>
+</body>
+</html>
