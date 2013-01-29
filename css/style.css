@@ -122,7 +122,7 @@
 
 				#modal .message.progress .progress-bar{
 					float: left;
-					height: 15px;
+					height: 19px;
 					width: 100%;
 					color: #fff;
 					text-align: right;
@@ -147,7 +147,9 @@
 				}
 					#modal .message.progress .progress-bar span{
 						float: left;
-						width: 0%;
+						width: 4%;
+						min-width: 4%;
+						padding: 2px 0;
 
 						border-radius: 4px;
 

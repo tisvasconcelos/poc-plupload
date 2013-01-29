@@ -8,12 +8,14 @@ var Upload = {
 	create: function(containers){
 		$(containers).each(function(index,object){
 			var uploader = new plupload.Uploader({
+				//file_data_name: 'image' //default: 'file',
 				runtimes : 'html5,flash,browserplus',
 				browse_button : $(object).find('a').attr('id'),
 				unique_names: true,
 				container: $(object).attr('id'),
 				max_file_size : '800mb',
 				url : 'upload.php',
+				multi_selection: false,
 				//resize : {width : 320, height : 240, quality : 90},
 				flash_swf_url : 'js/plupload.flash.swf',
 				filters : [
